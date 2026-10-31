@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetic Retinopathy Detector</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Diabetic Retinopathy Detector</h1>
+      <p>Upload a retinal fundus image. The app predicts <b>DR</b> or <b>No_DR</b> and shows a <b>LIME</b> explanation of the regions that influenced the result.</p>
+    </header>
+
+    <p class="notice" role="note">Research demo only. It is not a medical device and does not give a diagnosis. See an eye doctor for any health concern.</p>
+
+    <section class="card">
+      <div class="uploader">
+        <label for="file" class="sr">Fundus image</label>
+        <input type="file" id="file" accept="image/*"/>
+        <button id="btnPredict" type="button">Predict</button>
+      </div>
+      <div id="status" role="status" aria-live="polite"></div>
+      <div class="grid">
+        <div class="panel">
+          <h3>Input image</h3>
+          <img id="preview" alt="Uploaded fundus image" hidden/>
+          <p class="empty" id="previewEmpty">Choose an image to preview it here.</p>
+        </div>
+        <div class="panel">
+          <h3>Prediction</h3>
+          <div id="result" class="result"></div>
+          <div class="probs">
+            <div>DR: <span id="p_dr">–</span></div>
+            <div>No_DR: <span id="p_nodr">–</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>LIME explanation</h3>
+          <img id="lime" alt="LIME explanation overlay" hidden/>
+          <p class="empty" id="limeEmpty">The explanation appears after you click Predict.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer><small>Built with Flask, PyTorch and LIME</small></footer>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";margin:0;background:#0f172a;color:#e2e8f0}
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+header h1{margin:0 0 8px;font-size:28px}
+header p{margin:0 0 16px;color:#94a3b8}
+.card{background:#111827;padding:16px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.3);border:1px solid #1f2937}
+.uploader{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+button{padding:10px 16px;border-radius:12px;border:0;background:#22c55e;color:#052e16;font-weight:700;cursor:pointer}
+button:disabled{opacity:.6;cursor:not-allowed}
+#status{min-height:24px;margin:4px 0 12px;color:#93c5fd}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.panel{background:#0b1220;border:1px solid #202a39;border-radius:12px;padding:12px}
+.panel h3{margin:0 0 8px;color:#93c5fd}
+img{max-width:100%;height:auto;display:block;border-radius:10px;border:1px solid #1f2937;background:#0b1220}
+.result{font-size:24px;font-weight:800;margin:6px 0}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:14px}
+.badge.dr{background:#fecaca;color:#7f1d1d}
+.badge.nodr{background:#bbf7d0;color:#14532d}
+.probs{display:flex;gap:24px;margin-top:8px}
+footer{margin-top:14px;color:#64748b}
+@media (max-width: 900px){.grid{grid-template-columns:1fr}}
+.notice{margin:0 0 14px;padding:10px 14px;border-radius:10px;background:#422006;border:1px solid #854d0e;color:#fde68a;font-size:14px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.empty{margin:0;color:#64748b;font-size:14px}
+[hidden]{display:none!important}
+button:focus-visible,input:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}
